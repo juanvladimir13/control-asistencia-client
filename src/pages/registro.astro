@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1 class="fs-4 mt-3">Registro de asistencia</h1>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" id="descripcion"></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary" id="ubicacion"></h6>
+      <p class="info-item mb-0">
+        <span class="icon">📅</span>
+        <span class="text" id="fecha"></span>
+      </p>
+      <p class="info-item mb-0">
+        <span class="icon">🕒</span>
+        <span class="text"
+          ><strong>Ingreso:</strong><span id="hora-ingreso"></span></span
+        >
+      </p>
+      <p class="info-item mb-0">
+        <span class="icon">🕒</span>
+        <span class="text"
+          ><strong>Salida:</strong>
+          <span id="hora-salida"></span>
+        </span>
+      </p>
+      <p class="info-item mb-0">
+        <span class="icon">⏱️</span>
+        <span class="text"
+          ><strong>Tolerancia:</strong>
+          <span id="min-tolerancia"></span>
+          min</span
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="card mt-3">
+    <div class="d-flex justify-content-center pt-3">
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="tipo"
+          id="ingreso"
+          value="I"
+          checked
+        />
+        <label class="form-check-label" for="ingreso">Ingreso</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="tipo"
+          id="salida"
+          value="S"
+        />
+        <label class="form-check-label" for="salida">Salida</label>
+      </div>
+    </div>
+
+    <div class="mb-4 mt-2 px-3">
+      <label for="rfid-input" class="form-label">Tarjeta</label>
+      <input
+        type="text"
+        class="form-control"
+        id="rfid-input"
+        placeholder="Pasar la tarjeta por el sensor"
+        autofocus
+      />
+    </div>
+  </div>
+
+  <p id="asistente-data" class="fs-5 text-center mt-2">...</p>
+</BaseLayout>
+<script src="../scripts/registro.ts"></script>

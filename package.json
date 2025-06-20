@@ -1,14 +1,43 @@
 {
   "name": "asamblea-client",
-  "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.3",
+  "author": {
+    "name": "Juan Vladimir",
+    "email": "juanvladimir13@gmail.com",
+    "url": "https://juanvladimir13.web.app"
+  },
+  "dependencies": {
+    "@astrojs/upgrade": "^0.6.0",
+    "astro": "^5.9.1"
+  },
+  "description": "asamblea client",
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": ">=1.2.0"
+    }
+  },
+  "engines": {
+    "node": ">=18.20.8",
+    "bun": ">=1.2.0"
+  },
+  "homepage": "https://juanvladimir13.web.app",
+  "keywords": [
+    "astro",
+    "bun",
+    "template",
+    "web",
+    "frontend"
+  ],
+  "license": "MIT",
+  "packageManager": "bun@1.2.0",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "host": "astro preview --host",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^5.7.10"
-  }
+  "type": "module"
 }

@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1 class="fs-4 mt-3">Reporte de asistencia</h1>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" id="descripcion"></h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary" id="ubicacion"></h6>
+        <p class="info-item mb-0">
+          <span class="icon">📅</span>
+          <span class="text" id="fecha"></span>
+        </p>
+        <p class="info-item mb-0">
+          <span class="icon">🕒</span>
+          <span class="text"
+            ><strong>Ingreso:</strong>
+            <span id="hora-ingreso"></span></span
+          >
+        </p>
+        <p class="info-item mb-0">
+          <span class="icon">🕒</span>
+          <span class="text"
+            ><strong>Salida:</strong>
+            <span id="hora-salida"></span>
+          </span>
+        </p>
+        <p class="info-item mb-0">
+          <span class="icon">⏱️</span>
+          <span class="text"
+            ><strong>Tolerancia:</strong>
+            <span id="min-tolerancia"></span>
+            min</span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="mt-3 mb-3 d-flex justify-content-center gap-1">
+      <button data-estado="P" class="btn btn-sm btn-success">Presentes</button>
+      <button data-estado="A" class="btn btn-sm btn-secondary">Atrasados</button>
+      <button data-estado="F" class="btn btn-sm btn-danger">Faltas</button>
+      <button data-estado="L" class="btn btn-sm btn-warning">Licencia</button>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <p id="cantidad-personas" class="fs-5 mb-2">.</p>
+
+    <section class="card">
+      <div class="card-body" id="asistentes-container">
+
+      </div>
+    </section>
+  </div>
+</div>
+
+</BaseLayout>
+
+<style>
+  .jv {
+    display: grid;
+    grid-template-columns: 1fr 15px 15px;
+  }
+</style>
+<script src="../scripts/reporte.ts"></script>
