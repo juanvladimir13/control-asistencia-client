@@ -1,8 +1,18 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config';
-
+import path from 'node:path';
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    server: {
+      fs: {
+        allow: [
+          process.cwd(),
+          path.resolve('../..')
+        ]
+      }
+    }
+  },
   env: {
     schema: {
       API_URL: envField.string({ context: "client", access: "public"}),
