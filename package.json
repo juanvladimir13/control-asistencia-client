@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@astrojs/upgrade": "^0.6.0",
-    "astro": "^5.9.1"
+    "@nanostores/persistent": "^1.0.0",
+    "astro": "^5.9.1",
+    "nanostores": "^1.0.1"
   },
   "description": "asamblea client",
   "devEngines": {
